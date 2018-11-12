@@ -1,8 +1,17 @@
-# PasswordView
-密码或验证码输入控件
+//
+//  InputPasswordView.h
+//  passwordView
+//
+//  Created by xx_Cc on 2018/10/23.
+//  Copyright © 2018 xx_cc. All rights reserved.
+//
 
+#import <UIKit/UIKit.h>
 
-```
+NS_ASSUME_NONNULL_BEGIN
+
+@interface InputPasswordView : UIView
+
 /**
  * 密码框的大小
  */
@@ -35,22 +44,9 @@
  * 输入内容
  */
 @property (nonatomic, strong) NSString *contentStr;
-```
 
+- (instancetype)initWithPasswordCount:(int)count;
 
-使用方法
+@end
 
-```
-InputPasswordView *passwordView = [[InputPasswordView alloc] initWithPasswordCount: 6];
-passwordView.frame = CGRectMake(10, 200, 0, 0);
-passwordView.dotSize = CGSizeMake(50.0, 50.0);
-passwordView.dotInsets = UIEdgeInsetsMake(10, 20, 10, 20);
-passwordView.secureEntry = YES;
-passwordView.emptyBackImage = [UIImage imageNamed: @"empth_imageName"];
-passwordView.fillBackImage = [UIImage imageNamed: @"fill_imageName"];
-passwordView.dotTextColor = [UIColor purpleColor];
-
-// 需要设置完毕之后添加控件到view
-[self.view addSubview: passwordView];
-    
-```
+NS_ASSUME_NONNULL_END
